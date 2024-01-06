@@ -49,10 +49,10 @@ def query_data():
     return js.loads(query1_json)
     #return js.loads(js.dumps(query1_json))
 
-import nest_asyncio
-import uvicorn
-if __name__ == "__main__":
-    nest_asyncio.apply()
-    uvicorn.run(api_server)
+#import nest_asyncio
+#import uvicorn
+#if __name__ == "__main__":
+#    nest_asyncio.apply()
+#    uvicorn.run(api_server)
 
 
