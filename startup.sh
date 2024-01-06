@@ -1,1 +1,1 @@
-gunicorn -w 4 -k unicorn.worker.UvicornWorker emsckpi-api_json:app
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker emsckpi-api_json:app
