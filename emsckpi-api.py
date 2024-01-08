@@ -47,7 +47,6 @@ def query_data():
     query1_data = pd.read_sql("SELECT TOP 50 * FROM dbo.snowflake_table", sqlalch_conn)
     query1_json = query1_data.to_json(orient ='records')
     return js.loads(query1_json)
-    #return js.loads(js.dumps(query1_json))
 
 #import nest_asyncio
 #import uvicorn
