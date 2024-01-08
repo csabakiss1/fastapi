@@ -25,7 +25,7 @@ def query_data2():
 
 @app.get('/level3')
 def query_data3():
-    safety_lev3_select = safety_df['EARNINGS_VIEW_LVL3'].unique().tolist()
+    safety_lev3_select = safety_df['EARNINGS_VIEW_LVL3'].dropna().unique().tolist()
     level3_dict = {'EARNINGS_VIEW_LVL3':safety_lev3_select}
     return js.loads(js.dumps(level3_dict)) 
 
