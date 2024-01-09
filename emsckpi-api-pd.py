@@ -3,7 +3,7 @@ import pandas as pd
 import json as js
 from fastapi import FastAPI
 
-safety_df = pd.read_csv("snowflake_table.csv")
+safety_df = pd.read_csv("snowflake_table_new.csv")
 
 app = FastAPI()
 
