@@ -1,4 +1,4 @@
-# 2024.01.09  9.00
+# 2024.01.09  10.00
 import pandas as pd 
 import json as js
 from sqlalchemy import create_engine
@@ -45,13 +45,8 @@ def query_data():
     #query1_data = pd.read_sql("SELECT * FROM dbo.snowflake_table", sqlalch_conn)
     safety_json = safety_df.to_json(orient ='records')
     return js.loads(safety_json)
-    #return js.loads(js.dumps(query1_json))
        
-import nest_asyncio
-import uvicorn
-if __name__ == "__main__":
-    nest_asyncio.apply()
-    uvicorn.run(app)
+
 
 
 
