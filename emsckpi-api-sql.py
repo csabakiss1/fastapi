@@ -49,13 +49,8 @@ def query_data():
     safety_df = getsql_data("SELECT * FROM dbo.snowflake_table")
     safety_json = safety_df.to_json(orient ='records')
     return js.loads(safety_json)
-    #return js.loads(js.dumps(query1_json))
+
        
-import nest_asyncio
-import uvicorn
-if __name__ == "__main__":
-    nest_asyncio.apply()
-    uvicorn.run(app)
 
 
 
